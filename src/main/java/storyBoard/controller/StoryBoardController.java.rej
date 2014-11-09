@@ -1,0 +1,12 @@
+diff a/src/main/java/storyBoard/controller/StoryBoardController.java b/src/main/java/storyBoard/controller/StoryBoardController.java	(rejected hunks)
+@@ -45,8 +45,8 @@
+ 	public ModelAndView storyBoardWrite(@ModelAttribute StoryBoardDTO storyBoardDTO,@RequestParam MultipartFile img,HttpSession session) throws Exception{
+ 		
+ 		String fileName = img.getOriginalFilename();
+-		String filePath = "/home/hosting_users/nohave821/tomcat/webapps/ROOT/storage";
+-//		String filePath = "C:/dev/workspace/GiveBox/WebContent/storage";
++//		String filePath = "/home/hosting_users/nohave821/tomcat/webapps/ROOT/storage";
++		String filePath = "C:/dev/workspace/GiveBox/WebContent/storage";
+ 
+ 		File destFile = new File(filePath,fileName);
+ 		

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper      
+    PUBLIC "-//mybatisorg//DTD Mapper 3.0//EN"      
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ProjectBoard">
+
+	<select id="getTotalArticle" resultType="java.lang.Integer">
+		select count(*) from projectboard
+	</select>
+	
+	<insert id="insertProjectBoard" parameterType="projectBoardDTO">
+		insert into
+		projectboard values(
+		seq,
+		#{id},
+		#{subject},
+		#{content},
+		default,
+		#{endmoney},
+		#{image1},
+		default,
+		sysdate())
+	</insert>
+
+	<select id="getProjectBoardList" parameterType="java.util.Map"
+		resultType="projectBoardDTO">
+		select * from projectboard order by seq desc limit #{startNum},#{endNum}
+	</select>
+	
+	<update id="updateHit" parameterType="java.lang.Integer">
+		update projectboard set hit=hit+1
+		where seq=#{seq}
+	</update>
+
+	<select id="getArticle" parameterType="java.lang.Integer"
+		resultType="projectBoardDTO">
+		select * from projectboard where seq=#{seq}
+	</select>
+
+	<delete id="deleteProjectBoard" parameterType="java.lang.Integer">
+		delete from projectboard where seq=#{seq}
+	</delete>
+
+	<update id="giveProjectBoard" parameterType="int">
+		update projectboard set startmoney=startmoney+#{startmoney}
+		where seq=#{seq}
+	</update>
+</mapper>

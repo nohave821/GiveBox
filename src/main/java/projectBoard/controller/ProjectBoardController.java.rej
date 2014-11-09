@@ -1,0 +1,12 @@
+diff a/src/main/java/projectBoard/controller/ProjectBoardController.java b/src/main/java/projectBoard/controller/ProjectBoardController.java	(rejected hunks)
+@@ -44,8 +44,8 @@
+ 	public ModelAndView projectBoardWrite(@ModelAttribute ProjectBoardDTO projectBoardDTO,@RequestParam MultipartFile img,HttpSession session) throws Exception{
+ 		
+ 		String fileName = img.getOriginalFilename();
+-		String filePath = "/home/hosting_users/nohave821/tomcat/webapps/ROOT/storage";
+-//		String filePath = "C:/dev/workspace/GiveBox/WebContent/storage";
++//		String filePath = "/home/hosting_users/nohave821/tomcat/webapps/ROOT/storage";
++		String filePath = "C:/dev/workspace/GiveBox/WebContent/storage";
+ 
+ 		File destFile = new File(filePath,fileName);
+ 

@@ -1,0 +1,80 @@
+create table givemember(
+name varchar(30) not null,
+id varchar(30) primary key,
+pwd varchar(30) not null,
+gender varchar(3),
+email1 varchar(20),
+email2 varchar(20),
+tel1 varchar(10),
+tel2 varchar(10),
+tel3 varchar(10),
+zipcode varchar(10),
+addr1 varchar(100),
+addr2 varchar(100),
+logtime date)ENGINE=InnoDB DEFAULT CHARSET=utf8; 
+
+CREATE TABLE noticeboard(
+     seq int NOT NULL auto_increment,
+     id VARCHAR(20) NOT NULL,
+     name VARCHAR(40) NOT NULL,
+     email VARCHAR(40),
+     subject VARCHAR(255) NOT NULL,
+     content VARCHAR(4000) NOT NULL,
+     hit int DEFAULT 0,
+     logtime DATE,
+     primary key(seq)
+ )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE qnaboard(
+     seq int NOT NULL auto_increment,
+     id VARCHAR(20) NOT NULL,
+     name VARCHAR(40) NOT NULL,
+     email VARCHAR(40),
+     subject VARCHAR(255) NOT NULL,
+     content VARCHAR(4000) NOT NULL,
+     ref int NOT NULL,
+     lev int DEFAULT 0 NOT NULL,
+     step int DEFAULT 0 NOT NULL,
+     pseq int DEFAULT 0 NOT NULL,
+     reply int DEFAULT 0 NOT NULL,
+     hit int DEFAULT 0,
+     logtime DATE,
+     primary key(seq)
+ )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ 
+ 
+ CREATE TABLE storyboard(
+     seq int NOT NULL auto_increment,               
+     id VARCHAR(20) NOT NULL,
+     subject VARCHAR(255) NOT NULL,
+     content VARCHAR(4000) NOT NULL,
+     startmoney int DEFAULT 0,
+     endmoney int NOT NULL,
+     image1 varchar(200),
+     hit int DEFAULT 0,
+     logtime DATE,
+     primary key(seq)
+ )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ 
+ CREATE TABLE projectboard(
+     seq int NOT NULL auto_increment,               
+     id VARCHAR(20) NOT NULL,
+     subject VARCHAR(255) NOT NULL,
+     content VARCHAR(4000) NOT NULL,
+     startmoney int DEFAULT 0,
+     endmoney int NOT NULL,
+     image1 varchar(200),
+     hit int DEFAULT 0,
+     logtime DATE,
+     primary key(seq)
+ )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+create table zipcode( 
+ZIPCODE CHAR(7), 
+SIDO VARCHAR(10), 
+GUGUN VARCHAR(30), 
+DONG VARCHAR(50), 
+BUNJI VARCHAR(35), 
+SEQ INT(9) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

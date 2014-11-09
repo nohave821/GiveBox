@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration      
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"      
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+	<typeAliases>
+		<typeAlias alias="memberDTO" type="member.bean.MemberDTO"/>
+		<typeAlias alias="zipcodeDTO" type="member.bean.ZipcodeDTO"/>
+		<typeAlias alias="storyBoardDTO" type="storyBoard.bean.StoryBoardDTO" />
+		<typeAlias alias="projectBoardDTO" type="projectBoard.bean.ProjectBoardDTO" />
+		<typeAlias alias="noticeBoardDTO" type="noticeBoard.bean.NoticeBoardDTO" />
+		<typeAlias alias="qnaBoardDTO" type="qnaBoard.bean.QnaBoardDTO" />
+	</typeAliases>
+	
+
+	<mappers>
+		<mapper resource="member/dao/Member.xml"/>
+		<mapper resource="qnaBoard/dao/QnaBoard.xml"/>
+		<mapper resource="storyBoard/dao/StoryBoard.xml"/>
+		<mapper resource="projectBoard/dao/ProjectBoard.xml"/>
+		<mapper resource="noticeBoard/dao/NoticeBoard.xml"/>
+	</mappers>
+</configuration>
+
+
